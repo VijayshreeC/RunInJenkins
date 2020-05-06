@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite parallel="tests" name="Failed suite [GoogleSearch]" guice-stage="DEVELOPMENT" verbose="3">
+  <test thread-count="5" parallel="tests" name="GoogleChrome1(failed)" verbose="3">
+    <parameter name="browser" value="remotechrome"/>
+    <classes>
+      <class name="com.Testcases.Test1Test">
+        <methods>
+          <include name="executeFirstTest"/>
+          <include name="openBrowser"/>
+          <include name="closeBrowser"/>
+        </methods>
+      </class> <!-- com.Testcases.Test1Test -->
+      <class name="com.Testcases.Test2Test">
+        <methods>
+          <include name="openBrowser"/>
+          <include name="closeBrowser"/>
+          <include name="executeFirst2Testcase"/>
+        </methods>
+      </class> <!-- com.Testcases.Test2Test -->
+    </classes>
+  </test> <!-- GoogleChrome1(failed) -->
+</suite> <!-- Failed suite [GoogleSearch] -->

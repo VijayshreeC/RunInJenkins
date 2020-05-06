@@ -1,0 +1,12 @@
+com\Manager\DriverManagerFactory$1.class
+com\PageObjects\ThreadLocalForParallelTesting.class
+com\Testcases\BrowserClass.class
+com\Manager\DriverType.class
+com\Testcases\Test2Test.class
+com\Testcases\Test1Test.class
+com\Testcases\BaseUtils.class
+com\PageObjects\Test1PageObject.class
+com\Manager\ChromeDriverManager.class
+com\Manager\DriverManager.class
+com\Manager\DriverManagerFactory.class
+com\PageObjects\Test2PageObject.class
