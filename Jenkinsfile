@@ -17,6 +17,9 @@ pipeline {
         stage ('Build') {
             steps {
                 echo 'This is a minimal pipeline.'
+		    sh """ls -ltr
+		    pwd
+		    chmod 777 /var/jenkins_home/workspace/FirstCICDCloudProject/Drivers/chromedriver
                 sh 'mvn -Dmaven.test.failure.ignore=true install'
             }
         
