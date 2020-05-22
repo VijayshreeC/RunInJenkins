@@ -22,16 +22,8 @@ pipeline {
 		    chmod 777 /var/jenkins_home/workspace/FirstCICDCloudProject/Drivers/chromedriver
                	     sh 'mvn -Dmaven.test.failure.ignore=true install'
             }
-        
-	    post {
-	   success {
-		
-                    junit 'target/surefire-reports/**/*.xml' 
-		   // deleteDir()
-		  }
-		  cleanWs()
-            }
-			}
+        }
+	    
 		stage ('Testing Stage') {
 
             steps {
@@ -40,5 +32,5 @@ pipeline {
             }
         }
 
-    }
+   }
 }
