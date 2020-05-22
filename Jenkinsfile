@@ -27,6 +27,9 @@ pipeline {
 		stage ('Testing Stage') {
 
             steps {
+		    sh """ls -ltr
+		    pwd
+		    chmod 777 /var/jenkins_home/workspace/FirstCICDCloudProject/Drivers/chromedriver"""
                     sh 'mvn test'
                 
             }
