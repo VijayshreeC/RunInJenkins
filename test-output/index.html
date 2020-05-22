@@ -24,7 +24,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 2 failed tests</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -38,7 +38,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-GoogleSearch" class="navigator-link">
-              <span class="suite-name border-passed">GoogleSearch</span>
+              <span class="suite-name border-failed">GoogleSearch</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -91,26 +91,26 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">2 methods,   2 passed</span>
+                    <span class="method-stats">2 methods, 2 failed,   </span>
                   </li>
                   <li>
-                    <span class="method-list-title passed">Passed methods</span>
-                    <span class="show-or-hide-methods passed">
-                      <a href="#" panel-name="suite-GoogleSearch" class="hide-methods passed suite-GoogleSearch"> (hide)</a> <!-- hide-methods passed suite-GoogleSearch -->
-                      <a href="#" panel-name="suite-GoogleSearch" class="show-methods passed suite-GoogleSearch"> (show)</a> <!-- show-methods passed suite-GoogleSearch -->
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-GoogleSearch" class="hide-methods failed suite-GoogleSearch"> (hide)</a> <!-- hide-methods failed suite-GoogleSearch -->
+                      <a href="#" panel-name="suite-GoogleSearch" class="show-methods failed suite-GoogleSearch"> (show)</a> <!-- show-methods failed suite-GoogleSearch -->
                     </span>
-                    <div class="method-list-content passed suite-GoogleSearch">
+                    <div class="method-list-content failed suite-GoogleSearch">
                       <span>
-                        <img src="passed.png" width="3%"/>
+                        <img src="failed.png" width="3%"/>
                         <a href="#" panel-name="suite-GoogleSearch" title="com.Testcases.Test2Test" class="method navigator-link" hash-for-method="executeFirst2Testcase">executeFirst2Testcase</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
-                        <img src="passed.png" width="3%"/>
+                        <img src="failed.png" width="3%"/>
                         <a href="#" panel-name="suite-GoogleSearch" title="com.Testcases.Test1Test" class="method navigator-link" hash-for-method="executeFirstTest">executeFirstTest</a> <!-- method navigator-link -->
                       </span>
                       <br/>
-                    </div> <!-- method-list-content passed suite-GoogleSearch -->
+                    </div> <!-- method-list-content failed suite-GoogleSearch -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -122,24 +122,9 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-GoogleSearch" class="panel GoogleSearch">
-          <div class="suite-GoogleSearch-class-passed">
+          <div class="suite-GoogleSearch-class-failed">
             <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">com.Testcases.Test2Test</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="executeFirst2Testcase">
-                  </a> <!-- executeFirst2Testcase -->
-                  <span class="method-name">executeFirst2Testcase</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-GoogleSearch-class-passed -->
-          <div class="suite-GoogleSearch-class-passed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
+              <img src="failed.png"/>
               <span class="class-name">com.Testcases.Test1Test</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
@@ -148,10 +133,88 @@
                   <a name="executeFirstTest">
                   </a> <!-- executeFirstTest -->
                   <span class="method-name">executeFirstTest</span>
+                  <div class="stack-trace">java.lang.NullPointerException
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy13.sendKeys(Unknown Source)
+	at com.PageObjects.Test1PageObject.enterSeachText(Test1PageObject.java:29)
+	at com.Testcases.Test1Test.executeFirstTest(Test1Test.java:16)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:584)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:172)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:804)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:145)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
+	at org.testng.TestRunner.privateRun(TestRunner.java:770)
+	at org.testng.TestRunner.run(TestRunner.java:591)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+	at org.testng.SuiteRunner.access$000(SuiteRunner.java:41)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:443)
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:67)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+
+</div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-GoogleSearch-class-passed -->
+          </div> <!-- suite-GoogleSearch-class-failed -->
+          <div class="suite-GoogleSearch-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">com.Testcases.Test2Test</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="executeFirst2Testcase">
+                  </a> <!-- executeFirst2Testcase -->
+                  <span class="method-name">executeFirst2Testcase</span>
+                  <div class="stack-trace">java.lang.NullPointerException
+	at java.base/java.util.Objects.requireNonNull(Objects.java:221)
+	at org.openqa.selenium.support.ui.FluentWait.&lt;init&gt;(FluentWait.java:106)
+	at org.openqa.selenium.support.ui.WebDriverWait.&lt;init&gt;(WebDriverWait.java:85)
+	at org.openqa.selenium.support.ui.WebDriverWait.&lt;init&gt;(WebDriverWait.java:45)
+	at com.PageObjects.Test2PageObject.EnterSeachText(Test2PageObject.java:32)
+	at com.Testcases.Test2Test.executeFirst2Testcase(Test2Test.java:15)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:584)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:172)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:804)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:145)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
+	at org.testng.TestRunner.privateRun(TestRunner.java:770)
+	at org.testng.TestRunner.run(TestRunner.java:591)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+	at org.testng.SuiteRunner.access$000(SuiteRunner.java:41)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:443)
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:67)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-GoogleSearch-class-failed -->
         </div> <!-- panel GoogleSearch -->
         <div panel-name="test-xml-GoogleSearch" class="panel">
           <div class="main-panel-header rounded-window-top">
@@ -163,7 +226,7 @@
 &lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
 &lt;suite parallel=&quot;tests&quot; name=&quot;GoogleSearch&quot; guice-stage=&quot;DEVELOPMENT&quot; verbose=&quot;3&quot;&gt;
   &lt;test thread-count=&quot;5&quot; parallel=&quot;tests&quot; name=&quot;GoogleChrome1&quot; verbose=&quot;3&quot;&gt;
-    &lt;parameter name=&quot;browser&quot; value=&quot;chrome&quot;/&gt;
+    &lt;parameter name=&quot;browser&quot; value=&quot;saucechrome&quot;/&gt;
     &lt;classes&gt;
       &lt;class name=&quot;com.Testcases.Test1Test&quot;/&gt;
       &lt;class name=&quot;com.Testcases.Test2Test&quot;/&gt;
@@ -208,18 +271,18 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(2);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'executeFirst2Testcase')
-data.setCell(0, 2, 'com.Testcases.Test2Test')
-data.setCell(0, 3, 9059);
+data.setCell(0, 1, 'executeFirstTest')
+data.setCell(0, 2, 'com.Testcases.Test1Test')
+data.setCell(0, 3, 35);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'executeFirstTest')
-data.setCell(1, 2, 'com.Testcases.Test1Test')
-data.setCell(1, 3, 6257);
+data.setCell(1, 1, 'executeFirst2Testcase')
+data.setCell(1, 2, 'com.Testcases.Test2Test')
+data.setCell(1, 3, 8);
 window.suiteTableData['GoogleSearch']= { tableData: data, tableDiv: 'times-div-GoogleSearch'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 31 seconds</span>
+              <span class="suite-total-time">Total running time: 34 seconds</span>
               <div id="times-div-GoogleSearch">
               </div> <!-- times-div-GoogleSearch -->
             </div> <!-- times-div -->
@@ -247,31 +310,39 @@ return data;
             <div class="chronological-class">
               <div class="chronological-class-name">com.Testcases.Test1Test</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
-                <span class="method-name">openBrowser(chrome)</span>
+                <span class="method-name">openBrowser(saucechrome)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">executeFirstTest</span>
-                <span class="method-start">7501 ms</span>
+                <span class="method-start">18776 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">closeBrowser</span>
-                <span class="method-start">13765 ms</span>
+                <span class="method-start">18820 ms</span>
               </div> <!-- configuration-class after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.Testcases.Test2Test</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
-                <span class="method-name">openBrowser(chrome)</span>
-                <span class="method-start">15125 ms</span>
+                <span class="method-name">openBrowser(saucechrome)</span>
+                <span class="method-start">18823 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">executeFirst2Testcase</span>
-                <span class="method-start">21085 ms</span>
+                <span class="method-start">34129 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">closeBrowser</span>
-                <span class="method-start">30146 ms</span>
+                <span class="method-start">34139 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
