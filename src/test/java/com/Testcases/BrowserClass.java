@@ -35,7 +35,7 @@ public class BrowserClass {
 	public void openBrowser(String browsername) throws IOException, InterruptedException {
 		if (browsername.equals("chrome")) {
 			System.setProperty("webdriver.chrome.driver",
-					System.getProperty("user.dir") + "\\Drivers\\chromedriver.exe");
+					System.getProperty("user.dir") + "/Drivers/chromedriver.exe");
 			System.setProperty(ChromeDriverService.CHROME_DRIVER_SILENT_OUTPUT_PROPERTY, "true");
 			driver = new ChromeDriver();
 			driver.get(url);
