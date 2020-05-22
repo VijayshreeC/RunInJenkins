@@ -21,9 +21,9 @@ pipeline {
 		    pwd
 		    chmod 777 /var/jenkins_home/workspace/FirstCICDCloudProject/Drivers/chromedriver"""
                	     sh 'mvn -Dmaven.test.failure.ignore=true install'
-		    //sh 'mvn test'
+		    
             }
-        }
+        } // build stage
 	    
 		stage ('Testing Stage') {
 
@@ -34,7 +34,16 @@ pipeline {
                     sh 'mvn test'
                 
             }
-        }
+        } // testing stage
+	    
 
-   }
+   }// stages
+	
+	post
+	{
+	always
+		{
+		cleanWs()
+		}
+	}
 }
